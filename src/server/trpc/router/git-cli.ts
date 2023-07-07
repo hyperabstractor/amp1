@@ -29,7 +29,7 @@ export default router({
         .push('origin', 'master')
       return {
         success: true,
-        message: 'repo created',
+        message: input.name + ' repo created',
       }
     }),
 })
