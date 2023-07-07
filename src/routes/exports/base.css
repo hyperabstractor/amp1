@@ -1,0 +1,82 @@
+one-matrix-input,
+one-input,
+one-select,
+one-checkbox,
+one-radio,
+one-signature {
+  /* display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem; */
+}
+
+.cl-component {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.cl-component.cl-inline,
+[inline='true'] {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cl-component > .cl-input {
+}
+
+.cl-component > .cl-label {
+  flex-grow: 1;
+}
+
+.label-sm > .cl-label {
+  width: 33%;
+}
+.label-md > .cl-label {
+  width: 50%;
+}
+.label-lg > .cl-label {
+  width: 75%;
+}
+.label-max > .cl-label {
+  width: 100%;
+}
+
+[label-size='sm'] > .cl-label {
+  width: 33%;
+}
+[label-size='md'] > .cl-label {
+  width: 50%;
+}
+[label-size='lg'] > .cl-label {
+  width: 75%;
+}
+
+
+@media (min-width: 320px) {
+  .cl-component {
+    padding: 0rem;
+    /* background-color: green; */
+  }
+}
+
+@media (min-width: 460px) {
+  .cl-component {
+    padding: 0rem;
+    /* background-color: red; */
+  }
+}
+
+@media (min-width: 768px) {
+  .cl-component {
+    padding: 0.5rem;
+    /* background-color: blue; */
+  }
+}
+
+td {
+  padding: 0.5rem;
+}
+
+

@@ -1,0 +1,54 @@
+
+        // const collectionMeta = await db
+      //   .selectFrom('collections')
+      //   .selectAll()
+      //   .where('name', '=', tableName)
+      //   .execute()
+      // const fields = collectionMeta?.[0]?.fields || []
+      // const relatedFields = fields.filter((f) => f.dataType === 'relation')
+
+        // const connections = relatedFields.map((field: any) => {
+        //   return {
+        //     fk_table: tableName,
+        //     fk_field: field.name,
+        //     pk_table: field.settings.relation,
+        //     pk_field: 'id',
+        //     ids: records.map((r: any) => r[field.name]).filter((v, i, a) => a.indexOf(v) === i)
+        //   }
+        // })
+
+        // const connectionData = connections.map((connection: any) => {
+        //   const relatedRecords = db
+        //     .selectFrom(connection.pk_table)
+        //     .selectAll()
+        //     .where(connection.pk_field, 'in', connection.ids)
+        //     .execute()
+        //   return relatedRecords
+        // })
+
+        // const relatedData = await Promise.all(connectionData)
+
+
+
+        
+  // const lastRelatedValues = {} as any;
+  // const relations = createMemo(() => {
+  //   console.log("🟩 entered related memo");
+  //   const related = {} as any;
+  //   relatedFields().forEach((f: any) => {
+  //     const table = f.settings?.relation;
+  //     // const values = untrack(() => rows()?.map((r: any) => r[f.name]));
+  //     const values = rows()?.map((r: any) => r[f.name]) || [];
+  //     if (lastRelatedValues[table] === values) return;
+  //     if (!values?.length) return;
+  //     const [data, { refetch }] = createResource(() =>
+  //       client.getRowsFromCollection.query({
+  //         collection: table,
+  //         whereIn: { field: "id", values },
+  //       })
+  //     );
+  //     lastRelatedValues[table] = values;
+  //     related[table] = data;
+  //   });
+  //   return related;
+  // });
