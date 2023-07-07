@@ -46,11 +46,11 @@ const [removing, remove] = createServerAction$(
 
       return (
         <>
-        <Form class="css_ljsphma0" data-name="testform4">
-<one-select data-custom="true" data-type="ONE-SELECT" name="select" label="Select" class="css_ljsphma1" options="[&quot;Option 1&quot;,&quot;Option 2&quot;,&quot;Option 3&quot;]"></one-select>
-<one-radio data-custom="true" name="radio1" label="Radio 1" class="css_ljsphma2" columns="3" options="[&quot;Option 1&quot;,&quot;Option 2&quot;,&quot;Option 3&quot;]"></one-radio>
-<one-checkbox data-type="ONE-CHECKBOX" data-custom="true" type="checkbox" name="check1" label="Check 1" class="css_ljsphma3" columns="3" options="[&quot;Option 1&quot;,&quot;Option 2&quot;,&quot;Option 3&quot;]"></one-checkbox>
-<button type="submit" class="css_ljsphma4">
+        <Form class="css_ljsq9cd8" data-name="testform4">
+<one-select data-custom="true" data-type="ONE-SELECT" name="select" label="Select" class="css_ljsq9cd9" options="[&quot;Option 1&quot;,&quot;Option 2&quot;,&quot;Option 3&quot;]"></one-select>
+<one-radio data-custom="true" name="radio1" label="Radio 1" class="css_ljsq9cda" columns="3" options="[&quot;Option 1&quot;,&quot;Option 2&quot;,&quot;Option 3&quot;]"></one-radio>
+<one-checkbox data-type="ONE-CHECKBOX" data-custom="true" type="checkbox" name="check1" label="Check 1" class="css_ljsq9cdb" columns="3" options="[&quot;Option 1&quot;,&quot;Option 2&quot;,&quot;Option 3&quot;]"></one-checkbox>
+<button type="submit" class="css_ljsq9cdc">
 Submit
 </button>
 </Form>
