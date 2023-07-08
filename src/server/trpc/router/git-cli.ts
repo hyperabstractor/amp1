@@ -24,13 +24,15 @@ export default router({
 
       const remote = `https://${USER}:${PASS}@${REPO}`
 
-      git
+      const status = git
         .init()
         .add('./*')
         .commit('first commit!')
         .addRemote('origin', remote)
         .push(['-u', 'origin', 'master'], () => console.log('xxxxxdone'));
         // .push('origin', 'master')
+
+      console.log('🟢', status)
       return {
         success: true,
         message: input.name + ' repo created',
