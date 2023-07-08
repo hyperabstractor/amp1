@@ -29,7 +29,8 @@ export default router({
         .add('./*')
         .commit('first commit!')
         .addRemote('origin', remote)
-        .push('origin', 'master')
+        .push(['-u', 'origin', 'master'], () => console.log('xxxxxdone'));
+        // .push('origin', 'master')
       return {
         success: true,
         message: input.name + ' repo created',

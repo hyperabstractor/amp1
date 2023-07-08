@@ -39,7 +39,7 @@ const handler = createSolidAPIHandler({
   createContext,
 })
 
-console.log("🟠", handler);
+// console.log("🟠", handler);
 
 export const GET = handler
 export const POST = handler
