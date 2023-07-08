@@ -14,25 +14,44 @@ const git = simpleGit()
 // const installationId: string;
 // const octokit: Octokit;
 
+function onInit(err, initResult) {
+  console.log('init result: ', initResult)
+}
+function onRemoteAdd(err, addRemoteResult) {
+  console.log('remote add result: ', addRemoteResult)
+}
+
 export default router({
   createRepo: procedure
     .input(z.object({ name: z.string() }))
-    .mutation(({ input }) => {
+    .mutation(async ({ input }) => {
       const USER = 'hyperabstractor'
       const PASS = 'nilsim1.MART'
-      const REPO = 'github.com/hyperabstractor/simplegit-demo.git'
-
+      const REPO = 'github.com/hyperabstractor/amp1.git'
       const remote = `https://${USER}:${PASS}@${REPO}`
 
-      const status = git
-        .init()
-        .add('./*')
-        .commit('first commit!')
-        .addRemote('origin', remote)
-        .push(['-u', 'origin', 'master'], () => console.log('xxxxxdone'));
-        // .push('origin', 'master')
+      try {
+        // git
+        //   .init()
+        //   .addRemote('origin', remote)
+        //   .add('./src/routes/exports')
+        //   .commit('first commit!')
+        //   .push('origin', 'master')
 
-      console.log('🟢', status)
+        simpleGit()
+          .add('./*')
+          .commit('first commit!')
+          .addRemote('origin', remote)
+          .push(['-u', 'origin', 'master'], () => console.log('done'))
+      } catch (e) {
+        /* handle all errors here */
+      }
+
+      // simpleGit()
+      //   .clone(remote)
+      //   .then(() => console.log('finished'))
+      //   .catch((err) => console.error('failed: ', err))
+
       return {
         success: true,
         message: input.name + ' repo created',
