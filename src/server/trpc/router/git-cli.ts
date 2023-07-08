@@ -28,7 +28,7 @@ export default router({
         .init()
         .add('./*')
         .commit('first commit!')
-        .addRemote('origin', REPO)
+        .addRemote('origin', remote)
         .push('origin', 'master')
       return {
         success: true,
