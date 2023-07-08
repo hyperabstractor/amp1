@@ -44,6 +44,21 @@ export default router({
         .execute()
       return collection?.[0]
     }),
+  getIPFSRecords: procedure
+    .input(z.object({ name: z.string() }))
+    .query(async ({ input }) => {
+      const data = web3.eth.abi.encodeParameter('string', 'Hello World')
+      const hash = await ipfs.add(data)
+      const collection = await db
+        .selectFrom('collections')
+        .selectAll()
+        .where('name', '=', input.name)
+        .execute()
+        
+
+
+      return collection?.[0]
+    }),
   updateFields: procedure
     .input(
       z.object({

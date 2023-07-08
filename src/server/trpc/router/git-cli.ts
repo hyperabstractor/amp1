@@ -18,14 +18,17 @@ export default router({
   createRepo: procedure
     .input(z.object({ name: z.string() }))
     .mutation(({ input }) => {
+      const USER = 'hyperabstractor'
+      const PASS = 'nilsim1.MART'
+      const REPO = 'github.com/hyperabstractor/simplegit-demo.git'
+
+      const remote = `https://${USER}:${PASS}@${REPO}`
+
       git
         .init()
         .add('./*')
         .commit('first commit!')
-        .addRemote(
-          'origin',
-          'https://github.com/hyperabstractor/simplegit-demo.git'
-        )
+        .addRemote('origin', REPO)
         .push('origin', 'master')
       return {
         success: true,
