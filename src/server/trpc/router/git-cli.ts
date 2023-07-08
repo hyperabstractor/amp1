@@ -44,6 +44,7 @@ export default router({
           .addRemote('origin', remote)
           .push(['-u', 'origin', 'master'], () => console.log('done'))
       } catch (e) {
+        console.log("🟩", e);
         /* handle all errors here */
       }
 
